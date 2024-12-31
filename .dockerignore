@@ -1,0 +1,9 @@
+node_modules
+npm-debug.log
+prepare
+.gitignore
+Dockerfile
+client/*
+!client/dist
+*.json
+*.sh
