@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | Word Master</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #30bfa5, #7176d6);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        overflow: hidden;
+      }
+
+      .container {
+        text-align: center;
+        max-width: 600px;
+        padding: 20px;
+        border-radius: 15px;
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(10px);
+      }
+
+      .game-title {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #fff;
+        text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      }
+
+      .subtitle {
+        font-size: 1.2rem;
+        font-weight: 300;
+        color: #f3f3f3;
+      }
+
+      .buttons {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .button {
+        text-decoration: none;
+        font-size: 1.2rem;
+        padding: 12px 25px;
+        border-radius: 30px;
+        background: white;
+        color: #30bfa5;
+        font-weight: bold;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease-in-out;
+      }
+
+      .button:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      .play-button {
+        background: #7176d6;
+        color: white;
+      }
+
+      .play-button:hover {
+        background: #5b62b9;
+      }
+
+      .about-button:hover {
+        background: #e8f5f1;
+        color: #30bfa5;
+      }
+
+      footer {
+        margin-top: 20px;
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      @media (max-width: 480px) {
+        .game-title {
+          font-size: 2.5rem;
+        }
+
+        .subtitle {
+          font-size: 1rem;
+        }
+
+        .button {
+          font-size: 1rem;
+          padding: 10px 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1 class="game-title">About Word Master</h1>
+        <p class="subtitle">A fun and challenging word puzzle game!</p>
+      </header>
+      <main>
+        <div>
+          <p>
+            Word Master is a game that sharpens your mind with word puzzles. Try
+            to form words and solve challenging levels!
+          </p>
+        </div>
+        <div class="buttons">
+          <a href="index.html" class="button play-button">Home</a>
+          <a href="levels.html" class="button about-button">Levels</a>
+        </div>
+      </main>
+      <footer>
+        <p>© 2024 Word Master | Created with ❤️ for word enthusiasts</p>
+      </footer>
+    </div>
+  </body>
+</html>

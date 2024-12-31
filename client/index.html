@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Word Game</title>
+    <style>
+      /* General Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Background and Container */
+      body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #30bfa5, #7176d6);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        overflow: hidden;
+      }
+
+      .container {
+        text-align: center;
+        max-width: 500px;
+        width: 94%;
+        padding: 40px;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(20px);
+        position: relative;
+        overflow: hidden;
+        margin: 0 auto;
+      }
+
+      /* Glow Effect */
+      .container::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(
+          circle at center,
+          rgba(255, 255, 255, 0.1),
+          transparent
+        );
+        animation: rotateGlow 6s linear infinite;
+      }
+
+      @keyframes rotateGlow {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Title and Subtitle */
+      .game-title {
+        font-size: 3.5rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #fff;
+        text-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+      }
+
+      .subtitle {
+        font-size: 1.2rem;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      /* Buttons */
+      .buttons {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .button {
+        text-decoration: none;
+        font-size: 1.3rem;
+        padding: 15px 30px;
+        border-radius: 30px;
+        background: linear-gradient(135deg, #30bfa5, #7176d6);
+        color: white;
+        font-weight: bold;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        transition: all 0.4s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .button::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: 50%;
+        width: 200%;
+        height: 200%;
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateX(-50%) rotate(45deg);
+        transition: all 0.4s ease;
+        opacity: 0;
+      }
+
+      .button:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      }
+
+      .button:hover::before {
+        opacity: 1;
+      }
+
+      .play-button {
+        background: linear-gradient(135deg, #5b62b9, #7176d6);
+      }
+
+      .play-button:hover {
+        background: linear-gradient(135deg, #7176d6, #5b62b9);
+      }
+
+      .about-button {
+        background: linear-gradient(135deg, #2cbfa5, #30bfa5);
+      }
+
+      .about-button:hover {
+        background: linear-gradient(135deg, #30bfa5, #2cbfa5);
+      }
+
+      /* Footer */
+      footer {
+        margin-top: 30px;
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      /* Responsive Design */
+      @media (max-width: 480px) {
+        .game-title {
+          font-size: 2.5rem;
+        }
+
+        .subtitle {
+          font-size: 1rem;
+        }
+
+        .button {
+          font-size: 1rem;
+          padding: 10px 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1 class="game-title">Word Genius</h1>
+        <p class="subtitle">Unleash the power of words and conquer the game!</p>
+      </header>
+      <main>
+        <div class="buttons">
+          <a href="/levels.html" class="button play-button">Play</a>
+          <a href="/about.html" class="button about-button">About</a>
+        </div>
+      </main>
+      <footer>
+        <p>© 2024 Word Genius | Built for the ultimate word challenge</p>
+      </footer>
+    </div>
+  </body>
+</html>
